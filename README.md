@@ -77,36 +77,40 @@ Alternatively, run specific feature from your TestNG runner.
 ### 🔐 Login.feature
 
 ```gherkin
-Feature: Login to ParaBank
+Feature: ParaBank Login
 
-  Scenario: Successful login with valid credentials
-    Given User is on the Login Page
-    When User enters valid username and password
-    And Clicks on the Login button
-    Then User should be navigated to the Accounts Overview page
+Scenario: Successful Login with Valid credentials
+Given User is on Login Page
+Given User enters username and password
+And User clicks on Login button
+Then User should be redirected to Account Overview Page
+
 ```
 
 ### 📝 Registration.feature
 
 ```gherkin
-Feature: User Registration
+Feature: ParaBank Register
 
-  Scenario: Register new user
-    Given User is on the Registration Page
-    When User fills the registration form with valid details
-    And Clicks on the Register button
-    Then Registration should be successful and user redirected to Login
+Scenario: Successful Registration of new User
+Given User is on Login Page
+When User clicks on Register link
+And User enters all the required information 
+And User clicks on Register button
+Then User should be see registration confirmation
 ```
 
 ### 🏦 OpenAccount.feature
 
 ```gherkin
 Feature: Open New Account
+Scenario: User open a savings account successfully
 
-  Scenario: Open a new savings account
-    Given User is logged in
-    When User opens a new savings account
-    Then The new account should be created successfully
+Given User navigates to Open New Account 
+When user selects savings account type
+And user selects existing account to transfer funds
+And user clicks on Open Account button
+Then New Account should be created and confirmation displayed
 ```
 
 ### 💸 TransferFunds.feature
@@ -114,27 +118,12 @@ Feature: Open New Account
 ```gherkin
 Feature: Transfer Funds
 
-  Scenario: Transfer money between accounts
-    Given User is logged in
-    When User initiates a fund transfer from Account A to Account B
-    Then Funds should be transferred successfully and confirmation should be displayed
+Scenario: Successful Transfer of Funds
+Given User navigates to Transfer Funds 
+When User enters amount "2000"  
+And User selects from account and to account 
+And User Clicks on Transfer button
+Then Transfer should be successful with confirmation message 
 ```
 
----
-
-## 📸 Optional Enhancements
-
-- 📊 **Extent Reports** for HTML reports
-- 🧪 **Data-driven testing** with Excel or CSV (if applicable)
-- 🔄 **CI/CD Integration** with Jenkins or GitHub Actions
-- 🧑‍💻 Add screenshots on failure (if implemented)
-
----
-
-## 🙋 About Me
-
-I'm a QA Engineer with 10+ years of experience in **manual testing** and recently have transitioned into **automation testing** by building hands-on frameworks like this one using **Java + Selenium + Cucumber**. I’m actively seeking roles in QA Automation and open to collaboration.
-
-
----
 
