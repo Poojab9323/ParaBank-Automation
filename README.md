@@ -135,8 +135,6 @@ Feature: Transfer Funds
 
 I'm a QA Engineer with 10+ years of experience in **manual testing** and recently have transitioned into **automation testing** by building hands-on frameworks like this one using **Java + Selenium + Cucumber**. I’m actively seeking roles in QA Automation and open to collaboration.
 
-📧 Feel free to [connect on LinkedIn](https://www.linkedin.com/in/pooja-bhandarkar/)  
-📂 [Explore my GitHub Projects](https://github.com/poojab9323)
 
 ---
 
